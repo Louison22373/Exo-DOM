@@ -5,8 +5,15 @@
   <title>Exercice 3</title>
 </head>
 <body>
-  <form>
-    <label for="lastname">Votre nom  : </label><input type="text" name="lastname" id="lastname" />
-  </form>
+    <form>
+        <label for="lastname">Votre nom : </label>
+        <input type="text" name="lastname" id="lastname" />
+    </form>
+    
+    <script>
+        document.getElementById('lastname').addEventListener('input', function() {
+            alert(this.value);
+        });
+    </script>
 </body>
 </html>
