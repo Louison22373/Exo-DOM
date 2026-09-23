@@ -2,30 +2,36 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Exercice 5</title>
+    <title>document</title>
   </head>
-   <body>
+  <body>
     <div class="container">
-      <!-- Chaque image change de source (this.src) au survol de la souris -->
-      <img src="images/image1.jpg" id="image1" 
-           onmouseover="this.src='images/image2.jpg'" 
-           onmouseout="this.src='images/image1.jpg'" />
-
-      <img src="images/image2.jpg" id="image2" 
-           onmouseover="this.src='images/image3.jpg'" 
-           onmouseout="this.src='images/image2.jpg'" />
-
-      <img src="images/image3.jpg" id="image3" 
-           onmouseover="this.src='images/image4.jpg'" 
-           onmouseout="this.src='images/image3.jpg'" />
-
-      <img src="images/image4.jpg" id="image4" 
-           onmouseover="this.src='images/image5.jpg'" 
-           onmouseout="this.src='images/image4.jpg'" />
-
-      <img src="images/image5.jpg" id="image5" 
-           onmouseover="this.src='images/image1.jpg'" 
-           onmouseout="this.src='images/image5.jpg'" />
+      <img src="images/image1.jpg" id="image1" onmouseover="changer()" />
     </div>
+
+    <script>
+      var numero = 1;
+
+      function changer() {
+        numero = numero + 1;
+
+        if (numero == 2) {
+          document.getElementById("image1").src = "images/image2_2.jpg";
+        }
+        if (numero == 3) {
+          document.getElementById("image1").src = "images/image3_2.jpg";
+        }
+        if (numero == 4) {
+          document.getElementById("image1").src = "images/image4.jpg";
+        }
+        if (numero == 5) {
+          document.getElementById("image1").src = "images/image5.jpg";
+        }
+        if (numero > 5) {
+          numero = 1;
+          document.getElementById("image1").src = "images/image1.jpg";
+        }
+      }
+    </script>
   </body>
 </html>
